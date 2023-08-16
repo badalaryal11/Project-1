@@ -14,6 +14,7 @@
 		58251EB82A8B456F007BFDF1 /* Project_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58251EB62A8B456F007BFDF1 /* Project_1.xcdatamodeld */; };
 		58251EBA2A8B4575007BFDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58251EB92A8B4575007BFDF1 /* Assets.xcassets */; };
 		58251EBD2A8B4575007BFDF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58251EBB2A8B4575007BFDF1 /* LaunchScreen.storyboard */; };
+		584655842A8B7AB600CE99E1 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584655832A8B7AB600CE99E1 /* MainTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		58251EB92A8B4575007BFDF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58251EBC2A8B4575007BFDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58251EBE2A8B4575007BFDF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		584655832A8B7AB600CE99E1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				58251EAF2A8B456E007BFDF1 /* SceneDelegate.swift */,
 				58251EB12A8B456E007BFDF1 /* ViewController.swift */,
 				58251EB32A8B456F007BFDF1 /* Main.storyboard */,
+				584655832A8B7AB600CE99E1 /* MainTableViewCell.swift */,
 				58251EB92A8B4575007BFDF1 /* Assets.xcassets */,
 				58251EBB2A8B4575007BFDF1 /* LaunchScreen.storyboard */,
 				58251EBE2A8B4575007BFDF1 /* Info.plist */,
@@ -145,6 +148,7 @@
 				58251EB82A8B456F007BFDF1 /* Project_1.xcdatamodeld in Sources */,
 				58251EAE2A8B456E007BFDF1 /* AppDelegate.swift in Sources */,
 				58251EB02A8B456E007BFDF1 /* SceneDelegate.swift in Sources */,
+				584655842A8B7AB600CE99E1 /* MainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
