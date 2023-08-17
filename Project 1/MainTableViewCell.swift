@@ -8,20 +8,50 @@
 import UIKit
 
 class MainTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var status: UIButton!
+    
+    @IBOutlet weak var fileName: UILabel!
+    
+    @IBOutlet weak var uploadBy: UILabel!
+    
+    @IBOutlet weak var date: UILabel!
+    
+    @IBOutlet weak var fileNote: UILabel!
+    
+    @IBOutlet weak var attachedName: UILabel!
+    
+    @IBOutlet weak var attachedType: UILabel!
+    
+    @IBOutlet weak var link: UIImageView!
+    
+    @IBOutlet weak var attachedFileImage : UIImageView!
+    
+    
+   
+    
+  
 
-    @IBOutlet weak var circularImageView:UIImageView!
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        circularImageView.layer.cornerRadius = circularImageView.frame.width / 2
-              circularImageView.clipsToBounds = true
+       
+    }
+    
+    var data: Data!{
+        didSet{
+            updateUI()
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
        
-
+        
         // Configure the view for the selected state
     }
+    
+    
 
 }

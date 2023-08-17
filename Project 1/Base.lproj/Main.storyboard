@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Files View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MyFilesViewController" customModule="Project_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Mmk-QQ-6FJ" kind="show" id="NMz-P7-p8g"/>
+                                    <action selector="myFilesButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="D3o-yi-29u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,170 +43,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1201" y="21"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="NJa-lO-MjI">
-            <objects>
-                <viewController id="Mmk-QQ-6FJ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CzY-VC-k2q">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="datacell" rowHeight="783" id="sWI-7I-JyD" customClass="MainTableViewCell" customModule="Project_1" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="783"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sWI-7I-JyD" id="9Bi-ns-prk">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsh-tV-iab">
-                                            <rect key="frame" x="11" y="50" width="142" height="34.333333333333343"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" title="Upload Files" cornerStyle="medium">
-                                                <backgroundConfiguration key="background">
-                                                    <color key="backgroundColor" red="0.334472239" green="0.76816594599999999" blue="0.92727690939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </backgroundConfiguration>
-                                            </buttonConfiguration>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boZ-eu-tW1">
-                                            <rect key="frame" x="163" y="50" width="214" height="34.333333333333343"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="filled" image="paperplane.fill" catalog="system" imagePlacement="leading" title="Send Upload File Link" imagePadding="-1" cornerStyle="medium">
-                                                <color key="baseForegroundColor" red="0.2163010538" green="0.54445248840000005" blue="0.72236955169999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </buttonConfiguration>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgb-td-dDX">
-                                            <rect key="frame" x="258.66666666666669" y="107.33333333333333" width="105.33333333333331" height="36.999999999999986"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="37" id="tOT-iT-gSE"/>
-                                            </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Enrollment" cornerStyle="capsule">
-                                                <backgroundConfiguration key="background">
-                                                    <color key="backgroundColor" red="0.334472239" green="0.76816594599999999" blue="0.92727690939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </backgroundConfiguration>
-                                                <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            </buttonConfiguration>
-                                        </button>
-                                        <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNF-CI-qus">
-                                            <rect key="frame" x="22" y="146" width="357" height="232"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Group 17117" translatesAutoresizingMaskIntoConstraints="NO" id="T6q-5f-qT2">
-                                                    <rect key="frame" x="7" y="4" width="43" height="56"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIc-im-lCR">
-                                                    <rect key="frame" x="63" y="6" width="133" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="This is File Name">
-                                                            <attributes>
-                                                                <font key="NSFont" metaFont="system" size="17"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RBF-n5-G6p">
-                                                    <rect key="frame" x="59" y="23.000000000000004" width="194" height="34.333333333333336"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hG1-Gx-Zj0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="107" height="34.333333333333336"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="Upload By:">
-                                                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </buttonConfiguration>
-                                                        </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olivia Reed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcv-yc-vN5">
-                                                            <rect key="frame" x="108" y="0.0" width="86" height="34.333333333333336"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4PA-sq-9Ur">
-                                                    <rect key="frame" x="-1" y="71" width="355" height="1"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" id="YO2-h8-0gH"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwe-M0-sTf">
-                                                    <rect key="frame" x="19" y="91" width="46" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="File Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ole-Ik-xGD">
-                                                    <rect key="frame" x="17" y="118" width="82" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J5t-ZV-ANS">
-                                                    <rect key="frame" x="3" y="154" width="351" height="64"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="files" translatesAutoresizingMaskIntoConstraints="NO" id="6pr-Uk-6cB">
-                                                            <rect key="frame" x="-16" y="8" width="95" height="41"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attached File Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgr-by-5CV">
-                                                            <rect key="frame" x="66" y="9" width="168" height="22"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PDF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxD-bs-WA2">
-                                                            <rect key="frame" x="70" y="29" width="33" height="22"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download-circular-button" translatesAutoresizingMaskIntoConstraints="NO" id="ofo-2D-663">
-                                                            <rect key="frame" x="279" y="10" width="38" height="46"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.6235294938" green="0.6235294938" blue="0.6235294938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </view>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <constraints>
-                                                <constraint firstItem="4PA-sq-9Ur" firstAttribute="top" secondItem="T6q-5f-qT2" secondAttribute="bottom" constant="5" id="dUS-H4-7sc"/>
-                                                <constraint firstAttribute="width" secondItem="4PA-sq-9Ur" secondAttribute="width" multiplier="1.00563" id="lKv-eA-jee"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <color key="tintColor" red="0.85874277349999995" green="0.91332119700000003" blue="0.995554626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Tgb-td-dDX" secondAttribute="trailing" constant="9" id="3Rk-y3-F4S"/>
-                                        <constraint firstItem="Fsh-tV-iab" firstAttribute="top" secondItem="9Bi-ns-prk" secondAttribute="top" constant="50" id="5UO-p3-g1F"/>
-                                        <constraint firstItem="Fsh-tV-iab" firstAttribute="leading" secondItem="9Bi-ns-prk" secondAttribute="leading" constant="11" id="Ise-ix-xbm"/>
-                                        <constraint firstItem="boZ-eu-tW1" firstAttribute="top" secondItem="9Bi-ns-prk" secondAttribute="top" constant="50" id="VTJ-n3-1IO"/>
-                                        <constraint firstAttribute="trailing" secondItem="boZ-eu-tW1" secondAttribute="trailing" constant="16" id="b6X-2S-7kA"/>
-                                        <constraint firstItem="4PA-sq-9Ur" firstAttribute="width" secondItem="nNF-CI-qus" secondAttribute="width" multiplier="0.903308" id="gUX-Vv-zZ9"/>
-                                        <constraint firstItem="Tgb-td-dDX" firstAttribute="top" secondItem="boZ-eu-tW1" secondAttribute="bottom" constant="23" id="gg9-2X-038"/>
-                                        <constraint firstItem="Tgb-td-dDX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Bi-ns-prk" secondAttribute="leadingMargin" id="mRp-te-JVf"/>
-                                        <constraint firstItem="boZ-eu-tW1" firstAttribute="leading" secondItem="Fsh-tV-iab" secondAttribute="trailing" constant="10" id="qko-oE-iEk"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="UsB-1v-IR7">
-                        <barButtonItem key="backBarButtonItem" title="My Files" id="tih-hd-0l0"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GGF-SO-DbC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2098.4732824427479" y="17.605633802816904"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KyF-jC-BAw">
@@ -228,16 +64,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 17117" width="38" height="38"/>
-        <image name="download-circular-button" width="23" height="23"/>
-        <image name="files" width="24" height="29"/>
-        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
