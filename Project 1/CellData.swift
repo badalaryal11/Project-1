@@ -25,7 +25,7 @@ struct CellModel{
         let one = CellModel(status: "Enrollment",filename: "Data", uploadBy: "Ram", date: "01-01-2019 | 06:34:42",fileNote: "Insurance", attachedName: " Test1 xlsx", attachedType: "PDF", link: "https://vasundhara.io/blogs/navigate-from-one-view-controller-to-another-using-swift",
                             attachedFileImage: "files.png")
         
-        let two = CellModel(status: "Commision",filename: "Data", uploadBy: "Ram", date: "01-01-2019 | 06:34:42",fileNote: "Insurance", attachedName: " Test2 xlsx", attachedType: "PDF", link: "https://vasundhara.io/blogs/navigate-from-one-view-controller-to-another-using-swift",
+        let two = CellModel(status: "Commision",filename: "Data", uploadBy: "Ram", date: "01-01-2019 | 06:34:42",fileNote: "Insurance", attachedName: " Test2 xlsx", attachedType: "PDF", link: "Group 17117.png",
                             attachedFileImage: "files.png")
         
         let three = CellModel(status: "Cenus File",filename: "Data", uploadBy: "Ram", date: "01-01-2019 | 06:34:42",fileNote: "Insurance", attachedName: " Test3 xlsx", attachedType: "PDF", link: "https://vasundhara.io/blogs/navigate-from-one-view-controller-to-another-using-swift",
