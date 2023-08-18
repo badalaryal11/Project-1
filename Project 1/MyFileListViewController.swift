@@ -24,6 +24,7 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
         let nib = UINib(nibName: "MainTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "MainTableViewCell")
         tableView.reloadData()
+        
     }
     
     
@@ -34,10 +35,14 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
         let data = cellModels[indexPath.row]
+        cell.takeDataFromModel(model: data)
+        
         return cell
     }
     
     
-    
-    
 }
+
+
+
+

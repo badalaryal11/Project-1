@@ -31,13 +31,13 @@ class MainTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        
     }
     
     
     
     func takeDataFromModel(model: CellModel) {
-    
+        
         
         status.setTitle(model.status, for: .normal)
         
@@ -57,11 +57,10 @@ class MainTableViewCell: UITableViewCell {
         
         attachedFileImage.image = UIImage(named: model.attachedFileImage)
         
-       
         
     }
     
     
     
-
+    
 }
