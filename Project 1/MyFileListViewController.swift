@@ -8,15 +8,14 @@
 import UIKit
 
 class MyFileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-        
+    
     @IBOutlet weak var myUplodFiles: UIButton!
     
     @IBOutlet weak var sendUploadLinks: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
+    var cellModels: [CellModel] = CellModel.fetchData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,34 +23,21 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         let nib = UINib(nibName: "MainTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "MainTableViewCell")
-
-        
-    
-    
-    
-  }
-    
-   
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return 5
+        tableView.reloadData()
     }
-    // MARK: - Navigation
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellModels.count
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
+        let data = cellModels[indexPath.row]
         return cell
     }
     
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        /* Instead of: */
-        
-
-    }
     
-
+    
+    
 }

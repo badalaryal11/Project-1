@@ -16,7 +16,7 @@ struct CellModel{
     var attachedName: String?
     var attachedType: String?
     var link: String?
-    var attachedFileImage: String?
+    var attachedFileImage: String
     
     static func fetchData() -> [CellModel]
     {

@@ -28,29 +28,39 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var attachedFileImage : UIImageView!
     
     
-   
-    
-  
-
-   
     
     override func awakeFromNib() {
         super.awakeFromNib()
        
     }
     
-    var data: Data!{
-        didSet{
-            updateUI()
-        }
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    
+    
+    func takeDataFromModel(model: CellModel) {
+    
+        
+        status.setTitle(model.status, for: .normal)
+        
+        fileName.text = model.filename
+        
+        uploadBy.text = model.uploadBy
+        
+        date.text = model.date
+        
+        fileNote.text = model.fileNote
+        
+        attachedName.text = model.attachedName
+        
+        attachedType.text = model.attachedType
+        
+        link.image = UIImage(named: model.attachedFileImage)
+        
+        attachedFileImage.image = UIImage(named: model.attachedFileImage)
+        
        
         
-        // Configure the view for the selected state
     }
+    
     
     
 
