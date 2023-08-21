@@ -53,7 +53,7 @@ class MainTableViewCell: UITableViewCell {
         
         attachedType.text = model.attachedType
         
-        link.image = UIImage(named: model.attachedFileImage)
+        link.image = UIImage(named: model.link!)
         
         attachedFileImage.image = UIImage(named: model.attachedFileImage)
         
@@ -62,5 +62,11 @@ class MainTableViewCell: UITableViewCell {
     
     
     
+
+    
+    
+    
+
     
 }
+

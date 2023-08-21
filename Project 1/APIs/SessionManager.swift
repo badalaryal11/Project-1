@@ -8,7 +8,7 @@
 import Foundation
  
 struct SessionManager{
-   
+    
     let sessionURL = "https://qa-api.purenroll.com/api/v2/doc/list"
     
     
@@ -32,10 +32,31 @@ struct SessionManager{
             // 3. give session a task
             let task = session.dataTask(with: request) { (data,response,error) in
                 
+                
+                
             }
             task.resume()
             
             
+        }
+    }
+    
+    func parseJSON (_ apisData: Data) -> DataModel?{
+        let decoder = JSONDecoder()
+        do{
+            let decodedData = try decoder.decode(APIsData.self, from: apisData)
+            let id = decodedData.doc_id
+            let link = decodedData.doc_url
+            let date = decodedData.doc_date
+            let status = decodedData.doc_status
+            let filename = decodedData.file_title
+            let uploadBy = decodedData.uploaded_by
+            let fileNote = decodedData.doc_notes
+            let fileType = decodedData.doc_type
+            let data = DataModel(doc_id: id,doc_url: link,doc_date: date, doc_status: status,doc_type: fileType, file_title: filename,doc_notes : fileNote, uploaded_by: uploadBy)
+            return data
+        } catch{
+            return nil
         }
     }
     
