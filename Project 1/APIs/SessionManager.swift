@@ -6,14 +6,22 @@
 //
 
 import Foundation
- 
+
+
 struct SessionManager{
     
     let sessionURL = "https://qa-api.purenroll.com/api/v2/doc/list"
     
+    func fetchData() {
+            let urlString = "\(sessionURL)"
+        performRequest( sessionURL: sessionURL)
+        }
+   
     
+    var data = [DataModel]()
     
-    func performRequest(with sessionURL: String){
+   
+    func performRequest( sessionURL: String){
         // 1. create a URL
         if let url = URL(string: sessionURL){
             
@@ -31,20 +39,29 @@ struct SessionManager{
             
             // 3. give session a task
             let task = session.dataTask(with: request) { (data,response,error) in
+                if error != nil{
+                    print(error!)
+                    return
+                }
+                if let safeData = data{
+                    let dataString = String(data: safeData, encoding: .utf8)
+                    print(dataString!)
+                }
                 
                 
                 
             }
+            // 4.start the task
             task.resume()
             
             
         }
     }
     
-    func parseJSON (_ apisData: Data) -> DataModel?{
+    func parseJSON (_ dataModel: Data) -> DataModel?{
         let decoder = JSONDecoder()
         do{
-            let decodedData = try decoder.decode(APIsData.self, from: apisData)
+            let decodedData = try decoder.decode(DataModel.self, from: dataModel)
             let id = decodedData.doc_id
             let link = decodedData.doc_url
             let date = decodedData.doc_date

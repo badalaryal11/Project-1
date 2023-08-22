@@ -15,7 +15,10 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-    var cellModels: [CellModel] = CellModel.fetchData()
+    //var cellModels: [CellModel] = CellModel.fetchData()
+    var sessionManager = SessionManager()
+    var dataSource: [DataModel] = [] // Your array of DataModel instances
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,25 +27,39 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
         let nib = UINib(nibName: "MainTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "MainTableViewCell")
         tableView.reloadData()
+        sessionManager.fetchData()
+        
+        
+        
         
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellModels.count
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
-        let data = cellModels[indexPath.row]
-        cell.takeDataFromModel(model: data)
-        
+        let dataItem = dataSource[indexPath.row]
+        cell.status.setTitle(dataItem.doc_status, for: .normal)
+        cell.fileName.text = dataItem.file_title
+        cell.uploadBy.text = dataItem.uploaded_by
+        cell.date.text = dataItem.doc_date
+        cell.fileNote.text = dataItem.doc_notes
+        cell.attachedName.text = dataItem.file_title
+        cell.attachedType.text = dataItem.doc_type
+    
         return cell
     }
     
     
     
+    
 }
+
+
+
 
 
 
