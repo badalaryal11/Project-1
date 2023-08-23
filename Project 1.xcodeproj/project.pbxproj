@@ -54,6 +54,7 @@
 		58251EA12A8B456E007BFDF1 = {
 			isa = PBXGroup;
 			children = (
+				5824EF8F2A8DE104008E5248 /* MyFilesViewController.swift */,
 				58251EAC2A8B456E007BFDF1 /* Project 1 */,
 				58251EAB2A8B456E007BFDF1 /* Products */,
 			);
@@ -73,7 +74,6 @@
 				58265A342A8F75B30030C40F /* APIs */,
 				58251EAD2A8B456E007BFDF1 /* AppDelegate.swift */,
 				58251EAF2A8B456E007BFDF1 /* SceneDelegate.swift */,
-				5824EF8F2A8DE104008E5248 /* MyFilesViewController.swift */,
 				58251EB32A8B456F007BFDF1 /* Main.storyboard */,
 				58251EBB2A8B4575007BFDF1 /* LaunchScreen.storyboard */,
 				58251EB92A8B4575007BFDF1 /* Assets.xcassets */,

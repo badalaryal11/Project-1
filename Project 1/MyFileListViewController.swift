@@ -50,6 +50,7 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.attachedName.text = dataItem.file_title
         cell.attachedType.text = dataItem.doc_type
         
+        
         return cell
     }
     
