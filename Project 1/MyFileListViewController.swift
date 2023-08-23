@@ -49,8 +49,6 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.fileNote.text = dataItem.doc_notes
         cell.attachedName.text = dataItem.file_title
         cell.attachedType.text = dataItem.doc_type
-        
-        
         return cell
     }
     

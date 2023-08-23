@@ -8,6 +8,9 @@
 import Foundation
 
 
+
+
+
 struct SessionManager{
     
     let sessionURL = "https://qa-api.purenroll.com/api/v2/doc/list"

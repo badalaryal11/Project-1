@@ -37,26 +37,26 @@ class MainTableViewCell: UITableViewCell {
     
     
     
-    func takeDataFromModel(model: CellModel) {
+    func takeDataFromApi(model: DataModel) {
         
         
-        status.setTitle(model.status, for: .normal)
+        status.setTitle(model.doc_status, for: .normal)
         
-        fileName.text = model.filename
+        fileName.text = model.file_title
         
-        uploadBy.text = model.uploadBy
+        uploadBy.text = model.uploaded_by
         
-        date.text = model.date
+        date.text = model.doc_date
         
-        fileNote.text = model.fileNote
+        fileNote.text = model.doc_notes
         
-        attachedName.text = model.attachedName
+        attachedName.text = model.file_title
         
-        attachedType.text = model.attachedType
+        attachedType.text = model.doc_type
         
-        link.image = UIImage(named: model.link!)
+        link.image = UIImage(named: model.doc_url!)
         
-        attachedFileImage.image = UIImage(named: model.attachedFileImage)
+       
         
         
     }
