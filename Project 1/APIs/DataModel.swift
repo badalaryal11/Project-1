@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+struct Response : Codable{
+    var data:[DataModel]
+}
 struct DataModel: Codable{
     var doc_id: String?
     var doc_url: String?
