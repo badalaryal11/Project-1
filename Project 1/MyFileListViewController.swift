@@ -1,7 +1,6 @@
 //
 //  MyFileListViewController.swift
 //  Project 1
-//
 //  Created by Badal  Aryal on 16/08/2023.
 //
 
@@ -41,6 +40,7 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as! MainTableViewCell
+        
         let dataItem = dataSource[indexPath.row]
         cell.status.setTitle(dataItem.doc_status, for: .normal)
         cell.fileName.text = dataItem.file_title
@@ -49,6 +49,7 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.fileNote.text = dataItem.doc_notes
         cell.attachedName.text = dataItem.file_title
         cell.attachedType.text = dataItem.doc_type
+        
         return cell
     }
     

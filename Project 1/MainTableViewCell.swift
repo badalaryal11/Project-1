@@ -36,7 +36,6 @@ class MainTableViewCell: UITableViewCell {
     }
     
     
-    
     func takeDataFromApi(model: DataModel) {
         
         
@@ -54,20 +53,23 @@ class MainTableViewCell: UITableViewCell {
         
         attachedType.text = model.doc_type
         
-        link.image = UIImage(named: model.doc_url!)
-        
+        MainTableViewCell.takeDataFromApi(<#T##self: MainTableViewCell##MainTableViewCell#>)
        
+        
+        
         
         
     }
     
     
     
-
     
     
     
-
+    
+    
+    
+    
     
 }
 

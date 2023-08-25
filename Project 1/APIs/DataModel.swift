@@ -9,7 +9,7 @@ import Foundation
 
 struct DataModel: Codable{
     var doc_id: String?
-    var doc_url: String?
+//    var doc_url: String?
     var doc_date: String?
     var doc_status: String?
     var doc_type: String?
@@ -18,6 +18,12 @@ struct DataModel: Codable{
     var uploaded_by: String?
    
     
+}
+ 
+func fetchDataFromApi(){
+    var DataModel = [DataModel]()
+//    DataModel.append("doc_url")
+   
 }
 
 
