@@ -20,11 +20,6 @@ struct DataModel: Codable{
     
 }
  
-func fetchDataFromApi(){
-    var DataModel = [DataModel]()
-//    DataModel.append("doc_url")
-   
-}
 
 
 
