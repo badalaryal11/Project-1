@@ -38,7 +38,7 @@ class MainTableViewCell: UITableViewCell {
     
     func takeDataFromApi(model: DataModel) {
         
-       // model.fetchDataFromApi()
+       
         
         status.setTitle(model.doc_status, for: .normal)
         
@@ -54,6 +54,7 @@ class MainTableViewCell: UITableViewCell {
         
         attachedType.text = model.doc_type
         
+        link.isHighlighted = (model.doc_url != nil)
        
         
         

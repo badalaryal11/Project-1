@@ -66,7 +66,7 @@ struct SessionManager{
         do{
             let decodedData = try decoder.decode(DataModel.self, from: dataModel)
             let id = decodedData.doc_id
-           // let link = decodedData.doc_url
+            let link = decodedData.doc_url
             let date = decodedData.doc_date
             let status = decodedData.doc_status
             let filename = decodedData.file_title

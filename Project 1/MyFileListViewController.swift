@@ -16,17 +16,25 @@ class MyFileListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //var cellModels: [CellModel] = CellModel.fetchData()
     var sessionManager = SessionManager()
-    var dataSource: [DataModel] = [] // Your array of DataModel instances
-    
+    var dataSource: [DataModel] = []// Your array of DataModel instances
+    var dataCell = MainTableViewCell()
+    var dataModel = DataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        let nib = UINib(nibName: "MainTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "MainTableViewCell")
-        tableView.reloadData()
+       let nib = UINib(nibName: "MainTableViewCell", bundle: nil)
+       tableView.register(nib, forCellReuseIdentifier: "MainTableViewCell")
+        
         sessionManager.fetchData()
+        dataCell.takeDataFromApi(model: dataModel)
+        
+            self.tableView.reloadData()
+    
+           
+        
+        
         
         
         
