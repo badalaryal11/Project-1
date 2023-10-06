@@ -40,21 +40,21 @@ class MainTableViewCell: UITableViewCell {
         
        
         
-        status.setTitle(model.doc_status, for: .normal)
+        status?.setTitle(model.doc_status, for: .normal)
         
-        fileName.text = model.file_title
+        fileName?.text = model.file_title
         
-        uploadBy.text = model.uploaded_by
+        uploadBy?.text = model.uploaded_by
         
-        date.text = model.doc_date
+        date?.text = model.doc_date
         
-        fileNote.text = model.doc_notes
+        fileNote?.text = model.doc_notes
         
-        attachedName.text = model.file_title
+        attachedName?.text = model.file_title
         
-        attachedType.text = model.doc_type
+        attachedType?.text = model.doc_type
         
-        link.isHighlighted = (model.doc_url != nil)
+        link?.isHighlighted = (model.doc_url != nil)
        
         
         
